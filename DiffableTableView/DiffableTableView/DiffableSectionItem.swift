@@ -15,3 +15,4 @@ struct DiffableItem: Hashable {
     let id = UUID()
     let title: Int
 }
+
