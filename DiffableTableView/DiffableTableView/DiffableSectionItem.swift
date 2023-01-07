@@ -16,3 +16,9 @@ struct DiffableItem: Hashable {
     let title: Int
 }
 
+struct CardModel: Hashable, Decodable {
+    let title: String
+    let subTitle: String
+    let imageName: String
+}
+
