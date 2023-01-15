@@ -45,13 +45,4 @@ extension Publisher where Output == String, Failure == Never {
     }
 }
 
-
-["/", "/the-blog", "/speaking", "/newsletter"].publisher
-    .toURLSessionDataTask(baseURL: baseURL)
-    .sink(receiveCompletion: { completion in
-        print("Completed with: \(completion)")
-    }, receiveValue: { result in
-        print(result)
-    }).store(in: &cancellables)
-
 //: [Next](@next)
