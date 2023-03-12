@@ -12,3 +12,16 @@ import UIKit
     .sink { output in
         print(output)
     }
+
+
+// The .removeDuplicates operator, as its name implies, allows us to obtain only unique values:
+
+func removeDuplicatesExample() {
+    let values = [1, 1, 2, 3, 4, 8, 9, 9, 10]
+
+    let valuesPublisher = values.publisher
+
+    valuesPublisher
+        .removeDuplicates()
+        .sink(receiveValue: { print ($0)})
+}
